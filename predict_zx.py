@@ -57,6 +57,7 @@ def predict(east_detect, img_path, pixel_threshold, out_dir='_tmp/', img_size=73
         d_wight, d_height = resize_image(im, img_size)
         scale_ratio_w = d_wight / im.width
         scale_ratio_h = d_height / im.height
+        print('scale_ratio_w, scale_ratio_h : ', scale_ratio_w, scale_ratio_h)
         im = im.resize((d_wight, d_height), Image.NEAREST).convert('RGB')
         quad_im = im.copy()
         draw = ImageDraw.Draw(im)
